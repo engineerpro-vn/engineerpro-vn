@@ -59,6 +59,45 @@
   font-size: 1rem;
 }
 
+/* LinkedIn social link */
+.author-card .author-social {
+  margin: 0.6rem 0 0 0;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: #0a66c2;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.linkedin-link:hover {
+  background: #084d94;
+  transform: translateY(-1px);
+}
+
+.linkedin-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: #fff;
+  color: #0a66c2;
+  border-radius: 3px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  font-family: Arial, sans-serif;
+  letter-spacing: -0.05em;
+}
+
 /* --- Acknowledgments / Lời cảm ơn (dưới Về tác giả) --- */
 .acknowledgments {
   margin-top: 2rem;
