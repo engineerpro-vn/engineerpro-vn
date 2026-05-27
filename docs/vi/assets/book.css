@@ -649,3 +649,132 @@ pre {
 code {
   font-size: 0.92em;
 }
+
+/* ============================================================
+   DARK MODE OVERRIDES
+   water.css base switches body to dark when the browser/OS sets
+   prefers-color-scheme: dark. Our custom cards hardcoded light
+   backgrounds (#fff) and dark text colors (#333/#444/#555) that
+   become unreadable on dark body. Re-tint them here.
+   ============================================================ */
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* --- Author card --- */
+  .author-card {
+    background: rgba(58, 122, 254, 0.10);
+    border-left-color: #6b9bff;
+  }
+  .author-card .author-photo {
+    border-color: #2a2a2a;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  }
+  .author-card .author-role {
+    color: #b8b8b8;
+  }
+
+  /* --- Acknowledgments / Mentors --- */
+  .acknowledgments {
+    background: linear-gradient(135deg, rgba(58, 122, 254, 0.10), rgba(31, 157, 85, 0.10));
+    border-color: rgba(58, 122, 254, 0.35);
+  }
+  .acknowledgments h4 {
+    color: #8fb6ff;
+  }
+  .acknowledgments-footer {
+    background: rgba(255, 255, 255, 0.06);
+    color: #c8c8c8;
+  }
+  .mentors-list li {
+    background: rgba(255, 255, 255, 0.06);
+    border-left-color: #6b9bff;
+  }
+  @media (min-width: 700px) {
+    .mentors-list li:last-child {
+      color: #b8b8b8;
+      border-top-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  /* --- Feedback callout --- */
+  .feedback-callout {
+    background: rgba(255, 165, 0, 0.10);
+    border-color: rgba(255, 165, 0, 0.5);
+  }
+  .feedback-callout h4 {
+    color: #ffb84d;
+  }
+
+  /* --- EngineerPro logo card --- */
+  .engineerpro-card .logo {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* --- Title block "Authors:" label --- */
+  html[lang="vi"] .author:first-of-type::before,
+  html[lang="en"] .author:first-of-type::before {
+    color: #e0e0e0;
+  }
+
+  /* --- Language switcher --- */
+  .lang-switcher {
+    background: rgba(30, 30, 35, 0.95);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  }
+  .lang-switcher a {
+    color: #c8c8c8 !important;
+  }
+  .lang-switcher a:hover {
+    background: rgba(107, 155, 255, 0.18);
+    color: #8fb6ff !important;
+  }
+  .lang-switcher a.active {
+    background: #3a7afe;
+    color: #fff !important;
+  }
+
+  /* --- Abstract block + EngineerPro banner --- */
+  .abstract {
+    background: linear-gradient(135deg, rgba(58, 122, 254, 0.12), rgba(58, 122, 254, 0.05));
+    border-color: rgba(58, 122, 254, 0.35);
+  }
+  .engineerpro-banner blockquote {
+    background: rgba(58, 122, 254, 0.15);
+  }
+  .engineerpro-banner ul li::before {
+    color: #8fb6ff;
+  }
+
+  /* --- Donate box --- */
+  .donate-box {
+    background: rgba(255, 78, 78, 0.10);
+    border-color: rgba(255, 78, 78, 0.5);
+  }
+
+  /* --- Gold sponsor — keep warm light look (dark text on light gold reads fine) --- */
+  /* (no override needed; explicit text colors stay readable) */
+
+  /* --- Project goal --- */
+  .project-goal {
+    background: rgba(31, 157, 85, 0.14);
+    border-left-color: #2fcb73;
+  }
+
+  /* --- Course callout (was background: #fff → light text on white) --- */
+  .course-callout {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(31, 157, 85, 0.45);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* --- Video caption --- */
+  .video-caption {
+    color: #b8b8b8;
+  }
+  .video-caption a {
+    color: #ff7575;
+  }
+}
