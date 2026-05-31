@@ -616,6 +616,70 @@ html[lang="en"] .author:first-of-type::before {
   background: #6325c4;
 }
 
+/* Floating pill CTA — fixed bottom-right (matches engineerprogurus.com/courses style) */
+.floating-cta {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1rem;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: flex-end;
+  max-width: min(340px, calc(100vw - 2rem));
+  pointer-events: none;
+}
+
+.floating-cta-pill {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.15rem 0.6rem 0.6rem;
+  border-radius: 999px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #fff !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.floating-cta-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+  filter: brightness(1.05);
+}
+
+.floating-cta-courses {
+  background: linear-gradient(135deg, #1f9d55 0%, #0b7a3a 100%);
+}
+
+.floating-cta-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .floating-cta {
+    bottom: 0.85rem;
+    right: 0.65rem;
+    max-width: calc(100vw - 1.3rem);
+  }
+  .floating-cta-pill {
+    font-size: 0.76rem;
+    padding: 0.55rem 1rem 0.55rem 0.55rem;
+  }
+}
+
 /* On narrow screens, stack photo above text */
 @media (max-width: 700px) {
   .author-card {
@@ -838,5 +902,9 @@ code {
      light-grey edge can never leak through. */
   div.sourceCode {
     background-color: transparent;
+  }
+
+  .floating-cta-courses {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   }
 }
