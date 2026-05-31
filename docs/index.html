@@ -94,56 +94,141 @@
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
   <link rel="stylesheet" href="assets/book.css" />
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <!-- ============================================================
+       SEO HEADER (EN)
+       Injected into <head> via pandoc --include-in-header during HTML build.
+       Production base URL: https://lamthao1995.github.io/coding-interview-book/
+       If you move to a custom domain, update both seo-en.html and seo-vi.html
+       and SITE_URL in the Makefile.
+       ============================================================ -->
+
+  <!-- Short description tuned for Google search snippet (≤160 chars).
+       Longer copy lives in og:description / twitter:description below. -->
+  <meta name="description" content="Free book: 288 DSA coding-interview problems with full Python 3 solutions — 44 algorithm patterns asked at Google, Meta, Amazon, TikTok &amp; more Big Tech." />
+  <meta name="keywords" content="coding interview, DSA, data structures, algorithms, Python, leetcode, big tech interview, google interview, meta interview, amazon interview, tiktok interview, software engineer interview, interview prep, algorithm patterns, EngineerPro" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="rating" content="general" />
+  <meta name="theme-color" content="#3a7afe" />
+
+  <!-- Google Search Console site verification -->
+  <meta name="google-site-verification" content="7t99tt9Qqb9yObhtySrsPPt-CYXEWAJk8Yi4eeja6ps" />
+
+  <!-- Resource hints — preconnect to CDNs we load from for faster LCP -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="dns-prefetch" href="https://img.youtube.com" />
+
+  <!-- Canonical + multilingual alternates -->
+  <link rel="canonical" href="https://lamthao1995.github.io/coding-interview-book/" />
+  <link rel="alternate" hreflang="en" href="https://lamthao1995.github.io/coding-interview-book/" />
+  <link rel="alternate" hreflang="vi" href="https://lamthao1995.github.io/coding-interview-book/vi/" />
+  <link rel="alternate" hreflang="x-default" href="https://lamthao1995.github.io/coding-interview-book/" />
+
+  <!-- Favicon (uses existing EngineerPro logo asset) -->
+  <link rel="icon" type="image/jpeg" href="assets/engineerpro-logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/engineerpro-logo.jpg" />
+
+  <!-- Open Graph (Facebook, LinkedIn, Discord, Slack, etc.)
+       og:type=article is more reliably rendered than og:type=book (which
+       expects ISBN). We still describe the book in JSON-LD below. -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="EngineerPro · Coding Interview Book" />
+  <meta property="og:title" content="Coding DSA Interview at Big Tech — 288 Python Problems &amp; Solutions" />
+  <meta property="og:description" content="A free, comprehensive book of 288 DSA coding-interview problems with detailed Python 3 solutions, complexity analysis, and 44 algorithm patterns asked at Google, Meta, Amazon, TikTok, Uber and other Big Tech companies." />
+  <meta property="og:url" content="https://lamthao1995.github.io/coding-interview-book/" />
+  <meta property="og:image" content="https://lamthao1995.github.io/coding-interview-book/assets/interview-video-thumb.jpg" />
+  <meta property="og:image:secure_url" content="https://lamthao1995.github.io/coding-interview-book/assets/interview-video-thumb.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:image:alt" content="EngineerPro coding interview book — DSA interview at Big Tech" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:updated_time" content="2026-05-31" />
+  <meta property="article:published_time" content="2026-01-01" />
+  <meta property="article:modified_time" content="2026-05-31" />
+  <meta property="article:section" content="Coding Interview" />
+  <meta property="article:author" content="Phạm Ngọc Lâm" />
+  <meta property="article:author" content="Lê Quang Hoà" />
+  <meta property="article:tag" content="DSA" />
+  <meta property="article:tag" content="Python" />
+  <meta property="article:tag" content="Coding Interview" />
+  <meta property="article:tag" content="Big Tech" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coding DSA Interview at Big Tech — 288 Python Problems &amp; Solutions" />
+  <meta name="twitter:description" content="Free book — 288 Python interview problems, 44 algorithm patterns from Google, Meta, Amazon, TikTok, Uber &amp; more. By Phạm Ngọc Lâm &amp; Lê Quang Hoà." />
+  <meta name="twitter:image" content="https://lamthao1995.github.io/coding-interview-book/assets/interview-video-thumb.jpg" />
+  <meta name="twitter:image:alt" content="EngineerPro coding interview book — DSA interview at Big Tech" />
+
+  <!-- JSON-LD structured data — Book + WebSite + Organization.
+       EN page describes the English edition; the abstract work has a sibling
+       Vietnamese edition (#book-vi) connected via workTranslation. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Book",
+        "@id": "https://lamthao1995.github.io/coding-interview-book/#book-en",
+        "name": "Coding DSA Interview at Big Tech — with Full Solutions",
+        "alternateName": "EP Coding — DSA Interview at Big Tech",
+        "inLanguage": "en",
+        "bookFormat": "https://schema.org/EBook",
+        "isAccessibleForFree": true,
+        "url": "https://lamthao1995.github.io/coding-interview-book/",
+        "image": "https://lamthao1995.github.io/coding-interview-book/assets/interview-video-thumb.jpg",
+        "description": "A free, comprehensive book of 288 DSA coding-interview problems with detailed Python 3 solutions and analysis — covering 44 algorithm patterns asked at Google, Meta, Amazon, TikTok, Uber and other Big Tech companies.",
+        "keywords": "coding interview, DSA, algorithms, Python, leetcode, big tech, EngineerPro",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-05-31",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Phạm Ngọc Lâm",
+            "jobTitle": "ex-Senior Software Engineer @ TikTok / Grab · co-founder EngineerPro",
+            "sameAs": [
+              "https://www.linkedin.com/in/lampham1995/",
+              "https://www.facebook.com/lampham1995"
+            ]
+          },
+          {
+            "@type": "Person",
+            "name": "Lê Quang Hoà",
+            "jobTitle": "ex-Tech Lead @ TikTok · co-founder EngineerPro",
+            "sameAs": [
+              "https://www.linkedin.com/in/quanghoale/"
+            ]
+          }
+        ],
+        "publisher": { "@id": "https://lamthao1995.github.io/coding-interview-book/#publisher" },
+        "workTranslation": {
+          "@id": "https://lamthao1995.github.io/coding-interview-book/vi/#book-vi"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lamthao1995.github.io/coding-interview-book/#website",
+        "url": "https://lamthao1995.github.io/coding-interview-book/",
+        "name": "Coding DSA Interview at Big Tech",
+        "publisher": { "@id": "https://lamthao1995.github.io/coding-interview-book/#publisher" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://lamthao1995.github.io/coding-interview-book/#publisher",
+        "name": "EngineerPro",
+        "url": "https://engineerprogurus.com/",
+        "logo": "https://lamthao1995.github.io/coding-interview-book/assets/engineerpro-logo.jpg",
+        "sameAs": [
+          "https://www.facebook.com/EngineerPro.Official",
+          "https://engineerprogurus.com/courses/"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <div class="lang-switcher" role="navigation" aria-label="Language">
@@ -186,11 +271,11 @@ solutions matching the LeetCode style.</p>
     fanpage</strong> for a consultation:
   </p>
   <div class="course-cta">
-    <a href="https://engineerprogurus.com/blogs/khoa-hoc/khoa-hoc-dsa"
+    <a href="https://engineerprogurus.com/courses/khoa-hoc-dsa/"
        target="_blank" rel="noopener" class="course-btn">
       📖 DSA course details
     </a>
-    <a href="https://engineerprogurus.com/blogs/khoa-hoc/"
+    <a href="https://engineerprogurus.com/courses/"
        target="_blank" rel="noopener" class="course-btn course-btn-tertiary">
       🎓 All interview training courses (DSA, System Design, CS, Behavioural)
     </a>
